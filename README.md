@@ -1,18 +1,19 @@
 # Manage-AzureADMFAMethods
-A script to check and clear MFA methods in Azure AD
+A script to check and clear MFA methods in Azure AD.
+The script can also get recent MFA sign ins/failures for a user to assist troubleshooting.
 
 ## Usage
 Download and run from a Powershell session (.\Manage-AzureADMFAMethods)
 You'll need to make sure you have Global Admin/Authentication Admin role in AAD.
-You'll also need the MSOnline module installed.
+You'll also need the MSOnline and AzureADPreview module installed.
+The script uses modern authentication and is compatible with MFA.
 
-## Purpose
-I got tired of typing Get-MsolUser -userprincipalname [username] | select * to check for MFA enrollment. 
+Use the menu to navigate the script.
 
-Then I got tired of having to go back and check all the properties to see number of enrollments, types of enrollments, etc.
-
-Finally, I got tired of going back into OneNote to remember the command/syntax to clear out MFA enrollments.
-
-All the details are here. Comments in the script are pretty descriptive.
-
-Enjoy.
+### Functions
+0: Set User. A user must be set first to use the script's functions.
+1. Get registered MFA Methods and Details for User
+2. Clear MFA Registration for User
+3. Get recent MFA failures for User
+4. Get recent MFA successes for User
+5. Revoke Refresh Tokens (Require re-authentication)

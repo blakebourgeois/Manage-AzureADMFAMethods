@@ -1,6 +1,7 @@
 # Manage-AzureADMFAMethods
 A script to check and clear MFA methods in Azure AD.
 The script can also get recent MFA sign ins/failures for a user to assist troubleshooting.
+Eventually, this may need to be reworked with the Graph cmdlets.
 
 ## Usage
 Download and run from a Powershell session (.\Manage-AzureADMFAMethods)
